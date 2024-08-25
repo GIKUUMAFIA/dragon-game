@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond or Bomb Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <h1>Welcome to Diamond or Bomb Game</h1>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Board (Initially hidden) -->
+    <div id="game-container" style="display:none;">
+        <h2>Diamond or Bomb Game</h2>
+        <p id="credit-count">Credits: 500</p>
+        <button onclick="contactAdmin()">Contact Admin</button>
+        <div id="game-board"></div>
+        <p id="game-message"></p>
+        <button onclick="resetGame()">Reset Game</button>
+        <button id="cashout-button" style="display:none;" onclick="cashOut()">Cashout</button>
+    </div>
+
+    <!-- Admin Contact Modal (Initially hidden) -->
+    <div id="admin-modal" style="display:none;">
+        <h2>Contact Admin</h2>
+        <p>Please contact the admin to add more credits.</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

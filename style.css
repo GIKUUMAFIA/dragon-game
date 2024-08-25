@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('dragon-background.jpg'); /* Add a dragon-themed background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: #fff;
+}
+
+#landing-page, #game-container, #admin-modal {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for a fantasy look */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #b02e26; /* Dark red for a dragon-themed color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a41b18;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 80px); /* 6 columns */
+    grid-template-rows: repeat(6, 80px); /* 6 rows */
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    background-color: #555; /* Darker background for tiles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #f0e0d6; /* Light color for tile text */
+    background-image: url('tile-background.png'); /* Background image for tiles */
+    background-size: cover;
+    background-position: center;
+}
+
+.tile.disabled {
+    background-color: #333; /* Darker color for disabled tiles */
+    cursor: not-allowed;
+}
+
+#admin-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for modal */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    border-radius: 10px;
+}
+
+#cashout-button {
+    background-color: #d4af37; /* Gold color for the cashout button */
+    color: #fff;
+    display: block;
+}
+
+#cashout-button:hover {
+    background-color: #bfae2b;
+}
